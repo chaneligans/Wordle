@@ -5,5 +5,5 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Word(
-    val text: CharSequence
+    val word: String
 ) : Parcelable

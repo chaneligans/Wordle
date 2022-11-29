@@ -31,12 +31,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateWord() {
         wordleViewModel.updateWord()
-        binding.word.text = wordleViewModel.currentWord.value?.text
+        binding.word.text = wordleViewModel.currentWord.value?.word
     }
 
     private fun checkGuess() {
         val guessWord = binding.guessEditText.text.toString()
-        val answer = wordleViewModel.currentWord.value?.text.toString()
+        val answer = wordleViewModel.currentWord.value?.word.toString()
 
         val messageResId = when {
             guessWord == answer -> R.string.correct
